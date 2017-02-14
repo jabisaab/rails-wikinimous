@@ -1,0 +1,14 @@
+<h1>*** Articles ***</h1>
+<%= link_to "NEW ARTICLE", new_article_path(@article) %>
+<% @articles.each do |article| %>
+<br>==============================
+<h2><%=article.title%></h2>
+<br>
+<p><%= article.content %></p>
+<%= link_to "MORE DETAILS", article_path(article) %>
+<%= link_to "EDIT", edit_article_path(article) %>
+<%= link_to "DELETE", article_path(article), method: :delete%>
+<br>==============================
+<% end %>
+
+
